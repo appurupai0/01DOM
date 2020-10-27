@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DOM(要素の取得)</title>
+  <style type="text/css">
+    .textblue{
+      color: blue;
+    }
+  </style>
 </head>
 <body>
     <div id="hoge"></div>
@@ -19,7 +24,7 @@
       <input type="text" name='email' value="text@test.com">
     </form>
 
-    <ul>
+    <ul id="hogehoge">
       <li class="fuga">1</li>
       <li class="fuga">77</li>
       <li class="fuga moge">3</li>
@@ -28,7 +33,7 @@
 
     <ul id="tako">
       <li class="ika">1</li>
-      <li class="ika">2</li>
+      <li class="ika textblue">2</li>
       <li>3</li>
       <li>4</li>
     </ul>
@@ -41,13 +46,19 @@
       </select>
     </form>
 
-    <button onclick="btna_click()">ボタンA</button>
+    <button id="btnA" onclick="btna_click()">ボタンA</button>
     <button id="btnB">ボタンB</button>
     <button id="btnC">ボタンC</button>
 
     <div id="text">
       <p>ほげ</p>
     </div>
+
+  <div id="room">
+    <div id="ant">あり</div>
+    <div id="cockroach">ゴキブリ</div>
+    <div id="flies">コバエ</div>
+  </div>
 
     <div class="" id="html">
       <p>ほげ</p>
@@ -71,7 +82,7 @@
       <div>
         <input type="file" id="file">
       </div>
-      <button type="button" id="submit">送信</button>
+      <button type="button" id="submit" onclick="getInput();">送信</button>
     </form>
     <div>
       <img src="" alt="" id="upload-img" height="300px">
