@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css" integrity="sha512-uMIpMpgk4n6esmgdfJtATLLezuZNRb96YEgJXVeo4diHFOF/gqlgu4Y5fg+56qVYZfZYdiqnAQZlnu4j9501ZQ==" crossorigin="anonymous" />
   <title>DOM(要素の取得)</title>
   <style type="text/css">
     .textblue{
@@ -12,6 +13,9 @@
   </style>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.esm.browser.bundle.js" integrity="sha512-x+38qHciWXVBGxQJsf1KCKDAOcYKLe/tMYS9ESme0lgqqSlhuOsqvCECeGqZB5XG0IXOsgTV6/362XQ+U0JJxQ==" crossorigin="anonymous"></script>
+
+
     <div id="hoge"></div>
 
     <div>
@@ -87,6 +91,44 @@
     <div>
       <img src="" alt="" id="upload-img" height="300px">
     </div>
+
+
+    <!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="guitar.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="fortnite.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="guitar.png" alt="">
+        </div>
+        ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+   // スライダーswiper
+var mySwiper = new Swiper ('.swiper-container', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  centeredSlides : true,
+  pagination: '.swiper-pagination',
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev'
+</script>
+
 
     <script src="app.js"></script>
 </body>
